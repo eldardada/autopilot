@@ -21,7 +21,6 @@ const swiper = new Swiper('.program .swiper-container', {
     }
 });
 
-console.log(swiper);
 
 const title = document.querySelector('#program-content-title');
 const extra = document.querySelector('#program-extra');
