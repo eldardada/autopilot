@@ -1,0 +1,60 @@
+.hero
+    position: relative
+    display: grid
+    grid-template-rows: 94px 1fr
+    height: 100vh
+    min-height: 600px
+    background: url('/static/img/hero-bg.jpg') center center no-repeat
+    background-size: cover
+
+    +bp860-block
+        grid-template-rows: 77px 1fr
+
+    &::before
+        content: ''
+        position: absolute
+        background-color: rgba(0,0,0,0.1)
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+
+    &__content
+        position: relative
+        z-index: 2
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &__container
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+
+    &__title
+        text-align: center
+        font-size: var(--fz-h1)
+        font-weight: bold
+        max-width: 992px
+        margin-bottom: 20px
+        line-height: 139%
+        +lg-block
+            +font(40, 25)
+
+    &__subtitle
+        max-width: 480px
+        line-height: 110%
+        font-size: var(--fz-lg)
+        margin-bottom: 72px
+        text-align: center
+
+    &__title-mark
+        display: inline-block
+
+    &__wave
+        position: absolute
+        width: 100%
+        bottom: 0
+
+

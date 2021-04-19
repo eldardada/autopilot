@@ -1,0 +1,41 @@
+.know
+
+    &__content
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 30px
+        align-items: center
+        margin-bottom: 80px
+
+        +md-block
+            grid-template-columns: 1fr
+    
+    &-list
+        counter-reset: counter
+        max-width: 350px
+
+        li
+            display: grid
+            grid-template-columns: min-content 251px
+            grid-gap: 16px
+            align-items: center
+            line-height: 121.3%
+            
+            +sm-block
+                grid-template-columns: min-content 1fr
+
+            &::before
+                counter-increment: counter
+                display: inline-block
+                min-width: 95px
+                content: "0" counter(counter)
+                font-weight: bold
+                font-size: var(--fz-max)
+                vertical-align: middle
+                line-height: 1
+
+    &__btns
+        display: flex
+        justify-content: center
+
+    

@@ -1,0 +1,47 @@
+.offer
+    
+    &-cards
+        display: grid
+        grid-gap: 18px
+        grid-template-columns: 1fr 1fr 1fr 1fr
+
+        +xl-block
+            grid-template-columns: 1fr 1fr
+
+        +sm-block
+            grid-template-columns: 1fr
+
+    &-card
+        padding: 30px 13px
+        border: 3px solid transparent
+        border-image: linear-gradient(0, #577CFD,#9421EE) 
+        border-image-slice: 1
+
+        &__icon
+            position: relative
+            width: 40px
+            height: 40px
+            margin-bottom: 28px
+
+            &--purple::after
+                background-color: #9421EE
+
+            &--red::after
+                background-color: #EE2121
+
+            &--green::after
+                background-color: #56EE21
+
+            &--pink::after
+                background-color: #EE21A8
+
+            &::after
+                content: ''
+                position: absolute
+                height: 2px
+                width: 48px
+                left: 0
+                top: calc(100% + 8px)
+
+        &__text
+            line-height: 121.3%

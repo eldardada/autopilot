@@ -68,7 +68,7 @@ const webConfig = {
   devtool: isDev ? 'eval-source-map' : 'none'
 }
 
-export const clean = (done) => {
+export const clean = done => {
   let path = distDir;
   if(process.argv[3]) {
     let name = process.argv[3].replace('--', '');
@@ -87,7 +87,7 @@ export const styles = () => {
           .pipe(sass().on('error', sass.logError))
           .pipe(gcmq())
           .pipe(autoprefixer({
-              browsers: ['last 3 versions'],
+              browsers: ['last 2 versions'],
               cascade: false
           }))
           .pipe(gulpif(isProd, cleanCSS({
@@ -120,7 +120,7 @@ export const php = () => {
            .pipe(browserSync.stream())
 }
 
-const images = () => {
+export const images = () => {
     return gulp.src(config.app.img)
            .pipe(gulp.dest(config.dist.img))
            .pipe(browserSync.stream())
@@ -205,7 +205,7 @@ const fontsStyle = done => {
   done();
 }
 
-const svg = () => {
+export const svg = () => {
   return gulp.src(config.app.svg)
         .pipe(svgmin({
             js2svg: {
@@ -228,7 +228,7 @@ const svg = () => {
               }
             }
         }))
-        .pipe(gulp.dest('dist/static/img'))
+        .pipe(gulp.dest('./dist/static/img'))
         .pipe(browserSync.stream());
 }
 
@@ -267,8 +267,7 @@ export const csslib = () =>  {
 }
 
 export const fonts = gulp.series(fontTtf2Woff2, fontsStyle);
-
-export const build = gulp.series(clean, html, images, php, svg, scripts, fonts, styles);
+export const build = gulp.series(clean, scripts, html, grid, images, svg, fonts, styles, php);
 
 export const watch = gulp.series(build, () => {
     
@@ -281,12 +280,11 @@ export const watch = gulp.series(build, () => {
       // if u want to use sync + ur localhost
       // proxy: config.localhost
     })
-
+    gulp.watch(config.watch.js, scripts)
     gulp.watch(config.watch.html, html)
     gulp.watch(config.watch.grid, grid)
     gulp.watch(config.watch.img, images)
     gulp.watch(config.watch.svg, svg)
-    gulp.watch(config.watch.js, scripts)
     gulp.watch(config.watch.fonts, fonts)
     gulp.watch(config.watch.sass, styles)
     gulp.watch(config.watch.php, php)

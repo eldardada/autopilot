@@ -1,10 +1,20 @@
 :root {
     --color-black: #000;
     --color-white: #fff;
+    --fz-max: 72px;
+    --fz-sm: 14px;
+    --fz-h1: 48px;
+    --fz-lg: 24px;
+    --fz-md: 20px;
+    --fz-title: 36px;
+    --rose-white: #FFFAFA;
+    --dodger-blue: #577CFD;
+    --bg-color: #1D1C1C;
+    --electric-violet: #9421EE
 }
 
 // body vars
-$mainFont: 'Arial';
+$mainFont: 'Jost';
 $bodyFw: 400;
-$bodyFz: 15px;
+$bodyFz: var(--fz-sm);
 

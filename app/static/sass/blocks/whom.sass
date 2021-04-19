@@ -1,0 +1,82 @@
+.whom
+    position: relative
+    background-color: #151515
+
+    &__container
+        max-width: 1370px
+    
+    &__title
+        .title__mark
+            z-index: 1
+            background: none
+
+    &-cards
+        display: grid
+        grid-gap: 30px
+        grid-template-columns: repeat(auto-fill, 320px)
+        margin: 0 auto
+        
+        @media screen and ( max-width:  1400px)
+            max-width: 700px
+
+        @media screen and ( max-width:  700px)
+            max-width: 320px
+
+
+        +sm-block
+            grid-template-columns: 1fr
+
+    
+
+    &__cards
+
+        margin-bottom: 122px
+
+    &-card
+        
+        &__text
+            margin-top: 14px
+            font-weight: bold
+            font-size: var(--fz-md)
+            text-align: center
+
+
+    &-texts
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 50px
+        max-width: 1150px
+        margin: 0 auto
+
+        +sm-block
+            grid-template-columns: 1fr
+
+    &__texts
+        margin-bottom: 90px
+
+    &-text
+
+        &__title
+            font-weight: bold
+            font-size: var(--fz-md)
+            line-height: 29px
+            color: var(--color-white)
+            text-shadow: 0px 4px 20px rgba(255, 255, 255, 0.3)
+            margin-bottom: 40px
+
+        &__list
+            line-height: 29px
+
+            li
+                font-size: var(--fz-md)
+
+                &::before
+                    content: ''
+                    display: inline-block
+                    width: 6px
+                    height: 6px
+                    margin-right: 8px
+                    background: linear-gradient(0deg, #577CFD, #9421EE), #577CFD
+
+
+            

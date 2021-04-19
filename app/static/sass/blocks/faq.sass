@@ -1,0 +1,32 @@
+.faq
+    text-align: center
+    
+
+    &__container
+        display: flex
+        flex-direction: column
+        align-items: center
+        background: url('/static/img/faq.svg') center center no-repeat
+        background-size: contain
+
+    &__title
+        margin-bottom: 28px
+
+    &__text
+        margin-bottom: 30px
+        max-width: 390px
+
+    &__socials
+        margin-bottom: 80px
+
+    &__contacts
+        a 
+            font-size: var(--fz-lg)
+            transition: color .3s
+
+            &:hover
+                color: var(--dodger-blue)
+
+        li:nth-child(1)
+            margin-bottom: 10px
+        

@@ -4,37 +4,26 @@ const smartgridSettings = {
     offset: '30px', /* gutter width px || % || rem */
     mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
     container: {
-        maxWidth: '1162px', /* max-width оn very large screen */
+        maxWidth: '1177px', /* max-width оn very large screen */
         fields: '15px' /* side fields */
     },
     breakPoints: {
-        xxx: {
-            width: "1500px",
-        },
         xl: {
-            width: "1200px",
+            width: "1160px",
         },
-        bp1250: {
-            width: "1250px",
-        },
-        lg: {
-            width: "1000px",
-        },
-        bp900: {
-            width: "900px",
+        bp860: {
+            width: "860px",
         },
         md: {
-            width: "768px",
+            width: '768px',
+        },
+        lg: {
+            width: '992px',
         },
         sm: {
             width: "576px",
         },
-        xs: {
-            width: "450px",
-        },
-        xxs: {
-            width: "375px",
-        }
+
     }
 };
 

@@ -29,7 +29,7 @@ global.config = {
         php: `${appDir}*.php`,
         js: `${appDirstatic}js/index.js`,
         sass: `${appDirstatic}sass/` + mainSass,
-        img: [`${appDirstatic}img/**/*`, '!app/static/img/svg/**'],
+        img: [`${appDirstatic}img/**`, '!/app/static/img/svg/**'],
         fonts: `${appDirstatic}fonts/**/*`,
         svg: `${appDirstatic}img/svg/**/*.svg`,
         stylesLibs: `${appDirstatic}sass/libs`,

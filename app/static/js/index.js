@@ -1,4 +1,4 @@
-// import 'core-js/features/promise';
-import avg from './modules/some.js';
-
-console.log(avg(1,2,3));
+import './modules/lazy'
+import './modules/hero'
+import './modules/program'
+import './modules/video'

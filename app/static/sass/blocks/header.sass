@@ -1,0 +1,129 @@
+.header
+    position: relative
+    transition: background-color .3s
+    z-index: 100
+    
+    &__container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-top: 20px
+        padding-bottom: 20px
+
+    &__left
+        display: flex
+        align-items: center
+
+    &__menu
+        display: none
+        margin-right: 20px
+        
+        +bp860-block
+            display: block
+
+    &.header--active
+        position: fixed
+        background-color: #1d1d1d
+        top: 0
+        z-index: 100
+        width: 100%
+        border-bottom: 1px solid var(--dodger-blue)
+
+        .header__container
+            padding-top: 10px
+            padding-bottom: 10px
+
+    &--black
+        background-color: #1d1d1d
+
+
+.socials
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 63px
+
+    > li:hover
+
+        .socials__icon
+            fill: var(--dodger-blue)
+
+    &__icon
+        cursor: pointer
+        fill: var(--color-white)
+        transition: fill .3s
+
+.navbar
+    +bp860-block
+       position: absolute
+       left: 0
+       right: 0
+       top: 100%
+       transition: transform .3s
+       transform: scaleY(0)
+       transform-origin: top
+
+    &.active
+        transform: scaleY(1)
+
+
+    &-list
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        justify-content: space-between
+        width: 523px
+        
+        +bp860-block
+            width: 100%
+            justify-content: start
+            flex-direction: column
+            align-items: start
+            margin-bottom: -15px
+            background-color: #1d1d1d
+
+        li
+            +bp860-block                    
+                width: 100%
+                padding: 10px 20px
+                border-bottom: 1px solid var(--dodger-blue)
+
+                &:nth-child(1)
+                    border-top: 1px solid var(--dodger-blue)
+                
+                &:hover a
+                    color: var(--dodger-blue)
+
+
+        a 
+            font-weight: bold
+            font-size: 18px
+            transition: color .3s
+            
+            &:hover
+                color: var(--dodger-blue)
+
+    
+
+
+.menu
+
+    &__icon
+        cursor: pointer
+        transition: stroke .3s
+
+        &:hover
+            stroke: var(--dodger-blue)
+
+
+
+.logo
+
+    &__icon
+        width: 201px
+        height: 52px
+
+        +bp860-block
+            width: 100px
+            height: auto
+            

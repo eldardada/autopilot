@@ -1,6 +1,45 @@
 body
-    color: var(--color-dark)
+    color: var(--color-white)
     font-size: $bodyFz
     font-family: '#{$mainFont}', sans-serif
     font-weight: $bodyFw
-    background-color: var(--color-white)
+    background-color: var(--bg-color)
+
+    +sm-block
+        font-size: 20px
+
+button, a
+    font-family: inherit
+
+img
+    max-width: 100%
+    height: auto
+    display: block
+
+a
+    text-decoration: none
+    color: inherit
+
+
+.title
+    text-align: center
+    font-size: var(--fz-title)
+    font-weight: bold
+    text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1)
+    margin-bottom: 60px
+
+    &__mark
+        position: relative
+        padding: 2px
+        z-index: -1
+        background-color: var(--dodger-blue)
+
+.section
+    padding: 160px 0
+    +md-block
+        padding: 80px 0
+
+
+
+.text-purple
+    color: var(--electric-violet)
