@@ -2,19 +2,15 @@
     display: flex
     align-items: center
     justify-content: center
-    background: url('./static/img/present.svg') center 180px no-repeat
-    padding: 70px 0
+    background: url('./static/img/present.svg') center 150px no-repeat
+    background-size: cover
 
     +bp860-block
-        background-position: center 90px
+        background-position: center 50px
     
-    @media screen and ( max-width: 650px )
-        background-position: center 70px
-
-    @media screen and ( max-width: 620px )
+    @media screen and ( max-width: 580px )
         background-image: url('./static/img/present-sm.svg')
-        background-position-y: 70px
-        background-position-x: -20px
+        background-position: -20px 0
 
         
     &-list
@@ -23,19 +19,24 @@
         height: 306px
         max-width: 969px
         width: calc(100vw - 45px)
-        @media screen and ( max-width: 620px )
+        @media screen and ( max-width: 580px )
             height: auto
         li
             max-width: 180px
             text-align: center
-            @media screen and ( max-width: 620px )
+            @media screen and ( max-width: 580px )
                 font-size: var(--fz-md)
                 margin: 0 0 20px !important
                 text-align: left
                 max-width: 100%
 
         li:nth-child(1)
+            transform: translateY(80px)
             margin-left: auto
+            +bp860-block
+                transform: translateY(30px)
+            @media screen and ( max-width: 580px )
+                transform: translateY(0)
 
         
         li:nth-child(2)

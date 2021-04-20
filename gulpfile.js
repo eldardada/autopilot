@@ -61,6 +61,13 @@ const webConfig = {
                       plugins: ['@babel/plugin-proposal-object-rest-spread']
                   }
               }
+          },
+          {
+            test: /\.css$/,
+            exclude: '/node_modules/',
+            use: {
+              loader: 'css-loader'
+            }
           }
       ]
   },
